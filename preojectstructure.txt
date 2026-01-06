@@ -1,0 +1,36 @@
+document-question-answering/
+│
+├── data/
+│   └── uploads/                # User-uploaded documents
+│
+├── src/
+│   ├── ingestion/
+│   │   └── pdf_loader.py
+│   │
+│   ├── chunking/
+│   │   └── text_chunker.py
+│   │
+│   ├── embeddings/
+│   │   └── embedder.py
+│   │
+│   ├── retrieval/
+│   │   └── retriever.py
+│   │
+│   ├── qa/
+│   │   └── answer_extractor.py
+│   │
+│   ├── pipeline/
+│   │   └── qa_pipeline.py      # Handles multi-document QA
+│   │
+│   └── state/
+│       └── session_store.py    # Stores embeddings per session
+│
+├── templates/
+│   └── index.html
+│
+├── static/
+│   └── style.css
+│
+├── app.py                      # Flask app
+├── requirements.txt
+└── README.md
