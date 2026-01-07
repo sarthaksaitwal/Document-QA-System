@@ -1,1 +1,0 @@
-"/n".join(extracted_text)
