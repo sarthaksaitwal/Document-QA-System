@@ -2,3 +2,4 @@ fitz
 pymupdf
 pypdf
 PyPDF2
+sentence-transformers
