@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document Question Answering</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>📄 Document Question Answering System</h1>
+
+    <!-- Upload Form -->
+    <form method="POST" enctype="multipart/form-data">
+        <h3>Upload Documents</h3>
+        <input type="file" name="documents" multiple required>
+        <button type="submit">Process Documents</button>
+    </form>
+
+    {% if docs_ready %}
+    <hr>
+
+    <!-- Question Form -->
+    <form method="POST">
+        <h3>Ask a Question</h3>
+        <input type="text" name="question" placeholder="Enter your question..." required>
+        <button type="submit">Get Answer</button>
+    </form>
+    {% endif %}
+
+    {% if answer %}
+    <div class="result">
+        <h3>Answer:</h3>
+        <p>{{ answer }}</p>
+        <small>Source Document: {{ doc_id }}</small>
+    </div>
+    {% endif %}
+
+</div>
+
+</body>
+</html>
